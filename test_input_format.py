@@ -74,7 +74,7 @@ def dir_from_file(file_path, delimiter: str):
 
 
 d = "/"
-FIXTURE_DIR_PATH = f'{dir_from_file(__file__, d)}{d}input_fixtures'
+FIXTURE_DIR_PATH = "input_fixtures"
 
 
 def collect_tests():

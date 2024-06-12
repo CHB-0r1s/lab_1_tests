@@ -53,12 +53,11 @@ def validate_output(meta_inf, test_file_path):
     # TODO: прописать/устранить неявную логику метча тестов и ответов (если по имени, то как BORIS FIX проходит?)
     print(test_file_path)
     test_dir_path, method, input_file_name = test_file_path.rsplit("/", 2)
-    test_dir_path = ""  # test_dir_path.rsplit("/", 1)[0]
     output_file_name = f"{method}/{input_file_name.split('.')[0]}_ans.txt"
-    output_file_path = f"{test_dir_path}/output_fixtures/{output_file_name}"
+    output_file_path = f"output_fixtures/{output_file_name}"
     print(output_file_path)
     correct_output_file = open(output_file_path, "r")
-    checked_output_file = open(f"{test_dir_path}/lab1_test_result.txt", "r")
+    checked_output_file = open(f"lab1_test_result.txt", "r")
     if method == "Simple_Iter":
         return validate_output_simple_iteration(correct_output_file, checked_output_file, meta_inf)
     elif method == "Gauss_Regular":
